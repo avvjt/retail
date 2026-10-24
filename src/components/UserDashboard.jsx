@@ -297,9 +297,15 @@ export default function UserDashboard() {
   };
 
   
+
 useEffect(() => {
-  // Allow dashboard access during local development only.
-  if (import.meta.env.DEV) {
+  // TEMPORARY PREVIEW MODE:
+  // Allows exploring dashboard pages on the Vercel deployment.
+  // Remove or disable this before making the app public.
+
+  const demoMode = true;
+
+  if (demoMode) {
     setUser({
       id: 'demo-user',
       name: 'Demo User',
@@ -311,7 +317,7 @@ useEffect(() => {
   const token = localStorage.getItem('token');
 
   if (!token) {
-    navigate('/');
+    navigate('/login');
     return;
   }
 
@@ -320,19 +326,24 @@ useEffect(() => {
       Authorization: `Bearer ${token}`,
     },
   })
-    .then(res => res.json())
-    .then(data => {
-      if (data.error) {
-        localStorage.removeItem('token');
-        navigate('/');
-      } else {
-        setUser(data);
+    .then(async (res) => {
+      if (!res.ok) {
+        throw new Error('Authentication failed');
       }
+      return res.json();
+    })
+    .then((data) => {
+      if (data.error) {
+        throw new Error(data.error);
+      }
+      setUser(data);
     })
     .catch(() => {
-      // Ignore network errors.
+      localStorage.removeItem('token');
+      navigate('/login');
     });
 }, [navigate]);
+
 
 
   useEffect(() => {
