@@ -296,18 +296,30 @@ export default function UserDashboard() {
     setShowPermissionBanner(false);
   };
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      navigate('/');
-      return;
-    }
+  
+useEffect(() => {
+  // Allow dashboard access during local development only.
+  if (import.meta.env.DEV) {
+    setUser({
+      id: 'demo-user',
+      name: 'Demo User',
+      email: 'demo@retailx.local',
+    });
+    return;
+  }
 
-    fetch('/api/me', {
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    })
+  const token = localStorage.getItem('token');
+
+  if (!token) {
+    navigate('/');
+    return;
+  }
+
+  fetch('/api/me', {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
     .then(res => res.json())
     .then(data => {
       if (data.error) {
@@ -318,9 +330,10 @@ export default function UserDashboard() {
       }
     })
     .catch(() => {
-      // ignore
+      // Ignore network errors.
     });
-  }, [navigate]);
+}, [navigate]);
+
 
   useEffect(() => {
     const token = localStorage.getItem('token');
