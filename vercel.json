@@ -1,4 +1,3 @@
-cat > vercel.json <<'EOF'
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
@@ -8,4 +7,3 @@ cat > vercel.json <<'EOF'
     }
   ]
 }
-EOF
