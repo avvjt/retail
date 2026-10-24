@@ -1,0 +1,113 @@
+.bigger-vision-section {
+  background: transparent;
+  padding-bottom: 24px;
+}
+
+.vision-header {
+  margin-bottom: 40px;
+}
+
+.vision-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.vision-node {
+  width: 100%;
+  padding: 20px 24px;
+  background: rgba(10, 10, 10, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  border-radius: 14px !important;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.vision-node:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-border) !important;
+}
+
+.node-icon-glow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(200, 241, 53, 0.06);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.vision-node:hover .node-icon-glow {
+  background: var(--accent);
+  color: black;
+  box-shadow: var(--glow);
+}
+
+.node-content {
+  flex: 1;
+}
+
+.node-name {
+  font-size: 15.5px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.node-desc {
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.node-number-banner {
+  font-size: 9px;
+  color: var(--accent);
+  background: rgba(200, 241, 53, 0.08);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-border);
+}
+
+.flow-connector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  position: relative;
+}
+
+.connector-arrow-icon {
+  color: rgba(255, 255, 255, 0.15);
+  animation: bounce-arrow 1.8s infinite ease-in-out;
+}
+
+@keyframes bounce-arrow {
+  0%, 100% {
+    transform: translateY(0);
+    color: rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    transform: translateY(4px);
+    color: var(--accent);
+  }
+}
+
+@media (max-width: 600px) {
+  .vision-node {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .node-number-banner {
+    align-self: flex-start;
+  }
+}

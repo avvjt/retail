@@ -1,0 +1,43 @@
+.logobar {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.logobar-label {
+  text-align: center;
+}
+
+.logobar-track-container {
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.logobar-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 40s linear infinite;
+}
+
+.logobar-item {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 40px;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+.logobar-item:hover {
+  color: var(--accent);
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); } /* Since we duplicated it 3 times */
+}

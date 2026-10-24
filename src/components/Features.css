@@ -1,0 +1,132 @@
+.features {
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 24px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  transition: all 0.3s ease;
+  background: transparent;
+  width: 100%;
+}
+
+.feature-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-row:hover {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+}
+
+.feature-row:hover::before {
+  opacity: 1;
+}
+
+.feature-row:last-child {
+  border-bottom: none;
+}
+
+.fr-left {
+  position: absolute;
+  left: 24px;
+  font-size: 80px;
+  color: var(--accent);
+  opacity: 0.08;
+  font-weight: 800;
+  z-index: 0;
+  line-height: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.feature-row:hover .fr-left {
+  opacity: 0.15;
+}
+
+.fr-center {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  z-index: 1;
+  flex-grow: 1;
+  padding-left: 80px; /* Space for the watermark */
+}
+
+.fr-icon {
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(200, 241, 53, 0.05);
+  border: 1px solid rgba(200, 241, 53, 0.2);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.fr-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fr-title {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+}
+
+.fr-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.fr-right {
+  font-size: 40px;
+  color: var(--accent);
+  font-weight: 800;
+  z-index: 1;
+  flex-shrink: 0;
+  text-align: right;
+  min-width: 140px;
+}
+
+@media (max-width: 768px) {
+  .feature-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 32px 24px;
+  }
+  .fr-center {
+    padding-left: 0;
+  }
+  .fr-left {
+    left: auto;
+    right: 24px;
+    bottom: -10px;
+  }
+  .fr-right {
+    text-align: left;
+    font-size: 32px;
+  }
+}

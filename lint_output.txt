@@ -1,0 +1,114 @@
+
+> react-example@0.0.0 lint
+> tsc --noEmit
+
+server/index.ts(196,14): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | 3000' is not assignable to parameter of type 'number'.
+      Type 'string' is not assignable to type 'number'.
+server/middleware/auth.ts(26,21): error TS2352: Conversion of type 'Jwt & JwtPayload & void' to type '{ userId: number; email: string; isAdmin?: boolean | undefined; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Jwt & JwtPayload & void' is missing the following properties from type '{ userId: number; email: string; isAdmin?: boolean | undefined; }': userId, email
+server/middleware/auth.ts(26,39): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+server/middleware/auth.ts(45,21): error TS2352: Conversion of type 'Jwt & JwtPayload & void' to type '{ userId: number; email: string; isAdmin?: boolean | undefined; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Jwt & JwtPayload & void' is missing the following properties from type '{ userId: number; email: string; isAdmin?: boolean | undefined; }': userId, email
+server/middleware/auth.ts(45,39): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+server/poller/index.ts(3,10): error TS2300: Duplicate identifier 'eq'.
+server/poller/index.ts(37,32): error TS7006: Parameter 'quote' implicitly has an 'any' type.
+server/poller/index.ts(38,36): error TS7006: Parameter 'quote' implicitly has an 'any' type.
+server/poller/index.ts(226,38): error TS7006: Parameter 'quote' implicitly has an 'any' type.
+server/poller/index.ts(227,42): error TS7006: Parameter 'quote' implicitly has an 'any' type.
+server/poller/index.ts(744,7): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type '{ "Content-Type": string; Accept: string; Authorization: string; "X-UserType": string; "X-SourceID": string; "X-ClientLocalIP": string; "X-ClientPublicIP": string; "X-MACAddress": string; "X-PrivateKey": string | undefined; }' is not assignable to type 'HeadersInit | undefined'.
+      Type '{ "Content-Type": string; Accept: string; Authorization: string; "X-UserType": string; "X-SourceID": string; "X-ClientLocalIP": string; "X-ClientPublicIP": string; "X-MACAddress": string; "X-PrivateKey": string | undefined; }' is not assignable to type 'undefined'.
+server/poller/index.ts(1207,10): error TS2300: Duplicate identifier 'eq'.
+server/routes/auth.ts(46,5): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 17 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 17 more ... | { ...; }'.
+server/routes/auth.ts(52,5): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 17 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 17 more ... | { ...; }'.
+server/routes/auth.ts(159,48): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+server/routes/auth.ts(161,11): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'email' does not exist in type '{ createdAt?: Date | Placeholder<string, any> | SQL<unknown> | null | undefined; email: string | Placeholder<string, any> | SQL<unknown>; id?: number | Placeholder<...> | SQL<...> | undefined; passwordHash: string | ... 1 more ... | SQL<...>; }[]'.
+server/routes/auth.ts(168,9): error TS2741: Property 'createdAt' is missing in type '{ id: number; email: string; passwordHash: string; }' but required in type '{ id: number; email: string; passwordHash: string; createdAt: Date | null; }'.
+server/routes/auth.ts(213,21): error TS2352: Conversion of type 'Jwt & JwtPayload & void' to type '{ userId: number; email: string; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Jwt & JwtPayload & void' is missing the following properties from type '{ userId: number; email: string; }': userId, email
+server/routes/auth.ts(213,46): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+server/routes/auth.ts(228,7): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 17 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 17 more ... | { ...; }'.
+server/routes/auth.ts(251,21): error TS2352: Conversion of type 'Jwt & JwtPayload & void' to type '{ userId: number; email: string; isAdmin?: boolean | undefined; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Jwt & JwtPayload & void' is missing the following properties from type '{ userId: number; email: string; isAdmin?: boolean | undefined; }': userId, email
+server/routes/auth.ts(251,39): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+server/routes/auth.ts(343,7): error TS2739: Type '{ id: number; email: string; }' is missing the following properties from type '{ id: number; email: string; passwordHash: string; createdAt: Date | null; }': passwordHash, createdAt
+server/routes/auth.ts(369,21): error TS2352: Conversion of type 'Jwt & JwtPayload & void' to type '{ userId: number; email: string; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Jwt & JwtPayload & void' is missing the following properties from type '{ userId: number; email: string; }': userId, email
+server/routes/auth.ts(369,39): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+server/routes/auth.ts(392,21): error TS2352: Conversion of type 'Jwt & JwtPayload & void' to type '{ userId: number; email: string; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Jwt & JwtPayload & void' is missing the following properties from type '{ userId: number; email: string; }': userId, email
+server/routes/auth.ts(392,39): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+server/routes/billing.ts(30,27): error TS2339: Property 'createdAt' does not exist on type '{ id: number; userId: number; razorpaySubId: string | null; plan: string; status: string; currentPeriodEnd: Date | null; }'.
+server/routes/chat.ts(141,25): error TS2352: Conversion of type 'Jwt & JwtPayload & void' to type '{ userId: number; email: string; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Jwt & JwtPayload & void' is missing the following properties from type '{ userId: number; email: string; }': userId, email
+server/routes/chat.ts(141,43): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+server/routes/chat.ts(250,121): error TS2339: Property 'totalPnl' does not exist on type '{ id: number; userId: number; balance: string; startingBalance: string; resetCount: number; updatedAt: Date | null; createdAt: Date | null; }'.
+server/routes/chat.ts(282,31): error TS2339: Property 'maxLossPerDay' does not exist on type '{ id: number; userId: number; maxRiskPerTrade: string; maxDailyLoss: string; maxDrawdown: string; capitalBase: string; }'.
+server/routes/chat.ts(282,87): error TS2551: Property 'maxLossPerTrade' does not exist on type '{ id: number; userId: number; maxRiskPerTrade: string; maxDailyLoss: string; maxDrawdown: string; capitalBase: string; }'. Did you mean 'maxRiskPerTrade'?
+server/routes/chat.ts(282,140): error TS2339: Property 'maxTradesPerDay' does not exist on type '{ id: number; userId: number; maxRiskPerTrade: string; maxDailyLoss: string; maxDrawdown: string; capitalBase: string; }'.
+server/routes/chat.ts(282,199): error TS2339: Property 'trailingStopLoss' does not exist on type '{ id: number; userId: number; maxRiskPerTrade: string; maxDailyLoss: string; maxDrawdown: string; capitalBase: string; }'.
+server/routes/console.ts(278,25): error TS2352: Conversion of type 'Jwt & JwtPayload & void' to type '{ userId: number; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Property 'userId' is missing in type 'Jwt & JwtPayload & void' but required in type '{ userId: number; }'.
+server/routes/console.ts(278,43): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+server/routes/copilot.ts(186,25): error TS2352: Conversion of type 'Jwt & JwtPayload & void' to type '{ userId: number; email: string; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Jwt & JwtPayload & void' is missing the following properties from type '{ userId: number; email: string; }': userId, email
+server/routes/copilot.ts(186,43): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+server/routes/market.ts(976,40): error TS18048: 'val.stock' is possibly 'undefined'.
+server/routes/market.ts(979,21): error TS18048: 'val.stock' is possibly 'undefined'.
+server/routes/openchart.ts(3,20): error TS2307: Cannot find module 'moment' or its corresponding type declarations.
+server/routes/paperTrading.ts(923,41): error TS2339: Property 'maxTradesPerDay' does not exist on type '{ id: number; userId: number; maxRiskPerTrade: string; maxDailyLoss: string; maxDrawdown: string; capitalBase: string; }'.
+server/routes/settings.ts(18,13): error TS2339: Property 'email' does not exist on type '{ name: string | null; username: string | null; avatarUrl: string | null; twoFactorEnabled: boolean | null; referralCode: string | null; disciplineScore: number | null; edgeScore: number | null; ... 11 more ...; createdAt: Date | null; }'.
+server/routes/settings.ts(136,35): error TS18046: 'e' is of type 'unknown'.
+server/routes/survey.ts(19,21): error TS2352: Conversion of type 'Jwt & JwtPayload & void' to type '{ userId: number; email: string; }' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Jwt & JwtPayload & void' is missing the following properties from type '{ userId: number; email: string; }': userId, email
+server/routes/survey.ts(19,39): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+      Type 'undefined' is not assignable to type 'string | ArrayBuffer | BigInt64Array<ArrayBufferLike> | BigUint64Array<ArrayBufferLike> | ... 18 more ... | { ...; }'.
+server/routes/trades.ts(202,9): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'userId' does not exist in type '{ createdAt?: Date | Placeholder<string, any> | SQL<unknown> | null | undefined; emotion: string | Placeholder<string, any> | SQL<unknown>; entryPrice: string | ... 1 more ... | SQL<...>; ... 7 more ...; userId: number | ... 1 more ... | SQL<...>; }[]'.

@@ -1,0 +1,70 @@
+.architecture {
+  padding-bottom: 40px;
+}
+
+.arch-header {
+  margin-bottom: 32px;
+}
+
+.arch-table-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.arch-table-header {
+  display: flex;
+}
+
+.arch-table-row {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+
+.arch-table-row.last-row {
+  border-bottom: none;
+}
+
+.arch-col {
+  flex: 1;
+  padding: 16px 24px;
+  font-size: 15px;
+}
+
+.arch-table-header .arch-col {
+  padding: 16px 24px;
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Left Column Styling */
+.arch-col.old-way {
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 68, 68, 0.05); /* Subtle red tint */
+}
+
+/* Right Column Styling */
+.arch-col.new-way {
+  color: var(--accent);
+  font-weight: 500;
+  text-align: right;
+  background: rgba(200, 241, 53, 0.05); /* Subtle accent tint */
+}
+
+.arch-table-header .arch-col.right {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .arch-col, .arch-table-header .arch-col {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}

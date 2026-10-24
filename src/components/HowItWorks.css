@@ -1,0 +1,83 @@
+.how-it-works {
+  position: relative;
+}
+
+.hiw-grid-container {
+  position: relative;
+  margin-top: 48px;
+}
+
+.hiw-connector {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.hiw-svg {
+  width: 100%;
+}
+
+.hiw-line-bg {
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 2;
+  stroke-dasharray: 8 8;
+  fill: none;
+}
+
+.hiw-line-active {
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 8 8;
+  fill: none;
+}
+
+.hiw-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.hiw-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hiw-number {
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 24px;
+  padding: 0 16px;
+  text-shadow: 0 0 40px var(--accent-dim);
+}
+
+.hiw-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.hiw-description {
+  color: var(--text-secondary);
+  font-size: 16px;
+  max-width: 260px;
+}
+
+@media (min-width: 768px) {
+  .hiw-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .hiw-connector {
+    display: block;
+  }
+}

@@ -1,0 +1,61 @@
+.testimonials {
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+  text-align: left;
+}
+
+.testimonial-glass {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tg-quote {
+  font-size: 18px;
+  color: white;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.tg-divider {
+  height: 1px;
+  background: var(--glass-border);
+  margin: 20px 0;
+}
+
+.tg-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tg-name {
+  font-size: 14px;
+  color: white;
+  font-weight: 600;
+}
+
+.tg-role {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.saved-badge {
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-top: 16px;
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+}

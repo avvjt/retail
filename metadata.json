@@ -1,0 +1,8 @@
+{
+  "name": "Remix: RetailX",
+  "description": "An AI-powered behavioral safety system protecting retail traders from emotional, impulsive decisions through institutional-grade monitoring and guardrails.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

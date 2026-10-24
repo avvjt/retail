@@ -1,0 +1,59 @@
+.pain-stats {
+}
+
+.stats-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 32px 24px;
+  margin-top: 36px;
+  gap: 0;
+}
+
+.stats-divider {
+  width: 1px;
+  height: 60px;
+  background: var(--glass-border);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.stat-card .stat-number {
+  font-size: clamp(48px, 6vw, 64px);
+  font-weight: 800;
+  color: #ffffff !important;
+  margin-bottom: 16px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.stat-card .stat-label {
+  font-size: 16px;
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .stats-bar {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 24px;
+  }
+  .stats-divider {
+    width: 80%;
+    height: 1px;
+  }
+}
